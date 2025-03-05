@@ -1,0 +1,214 @@
+/* Universal Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #0A0A0A;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #121212;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    color: #1E90FF;
+}
+
+/* ︙ Menu Button */
+.menu-container {
+    position: relative;
+}
+
+.menu-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-btn:hover {
+    color: #1E90FF;
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #1A1A1A;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    width: 140px;
+}
+
+.menu-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-dropdown a:hover {
+    background: #1E90FF;
+}
+
+/* Main Section */
+.home-main {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E90FF;
+}
+
+p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Upload Button */
+.btn {
+    background: #1E90FF;
+    color: white;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #0A75C2;
+}
+
+/* Quotes Section */
+.quotes-section {
+    background: #1A1A1A;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.quotes-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1E90FF;
+}
+
+.quotes {
+    max-width: 600px;
+    margin: auto;
+}
+
+blockquote {
+    font-size: 16px;
+    font-style: italic;
+    margin: 10px 0;
+    position: relative;
+    padding: 15px;
+    border-left: 4px solid #1E90FF;
+}
+
+blockquote span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ︙ Menu Container */
+.menu-container {
+    position: relative;
+}
+
+/* Menu Button */
+.menu-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-btn:hover {
+    color: #1E90FF;
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #1A1A1A;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    width: 140px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Show menu when active */
+.menu-dropdown.active {
+    display: block;
+}
+
+/* Menu Links */
+.menu-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-dropdown a:hover {
+    background: #1E90FF;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
