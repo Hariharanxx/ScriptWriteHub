@@ -50,3 +50,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const dropArea = document.getElementById("drop-area");
+  const fileInput = document.getElementById("script-file");
+
+  dropArea.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    dropArea.style.background = "rgba(30, 144, 255, 0.2)";
+  });
+
+  dropArea.addEventListener("dragleave", () => {
+    dropArea.style.background = "transparent";
+  });
+
+  dropArea.addEventListener("drop", (event) => {
+    event.preventDefault();
+    dropArea.style.background = "transparent";
+
+    const files = event.dataTransfer.files;
+    if (files.length > 0) {
+      fileInput.files = files;
+      alert(`File "${files[0].name}" selected!`);
+    }
+  });
+
+  document.querySelector(".upload-btn").addEventListener("click", () => {
+    fileInput.click();
+  });
+});

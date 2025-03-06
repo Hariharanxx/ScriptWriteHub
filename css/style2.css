@@ -1,0 +1,140 @@
+/* Universal Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #0A0A0A;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #121212;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.upload-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    color: #1E90FF;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #1E90FF;
+}
+
+/* Upload Form */
+.upload-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    color: #1E90FF;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #0D0D0D;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #1E90FF;
+    outline: none;
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed #1E90FF;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.upload-box:hover {
+    background: rgba(30, 144, 255, 0.1);
+}
+
+/* Upload Button */
+.upload-btn {
+    display: inline-block;
+    background: #1E90FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.upload-btn:hover {
+    background: #0A75C2;
+}
+
+/* Hide Default File Input */
+#script-file {
+    display: none;
+}
+
+/* Submit Button */
+.btn {
+    background: #1E90FF;
+    color: white;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #0A75C2;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

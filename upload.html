@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Script - ScriptWriteHub</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="upload-title">Upload Your Script to Give Life</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="home.html">Home</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="upload-container">
+        <form id="upload-form">
+            <label for="script-title">Title of Your Script</label>
+            <input type="text" id="script-title" name="title" placeholder="Enter script title" required>
+
+            <label for="script-description">Description</label>
+            <textarea id="script-description" name="description" placeholder="Briefly describe your script..." required></textarea>
+
+            <div class="upload-box" id="drop-area">
+                <p>Drag & Drop your script file here</p>
+                <input type="file" id="script-file" name="script" accept=".pdf, .txt, .docx" required>
+                <label for="script-file" class="upload-btn">Choose a File</label>
+            </div>
+
+            <button type="submit" class="btn">Upload Script</button>
+        </form>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
