@@ -1,0 +1,139 @@
+/* Universal Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #0A0A0A;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #121212;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    color: #1E90FF;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #1E90FF;
+}
+
+/* Content Section */
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1E90FF;
+}
+
+.content p {
+    font-size: 18px;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.content ul li::before {
+    content: "✔ ";
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #121212;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-nav {
+    margin-top: 10px;
+}
+
+.footer-nav a {
+    font-family: 'Poppins', sans-serif;
+    color: #1E90FF;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+    color: white;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E90FF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+}
