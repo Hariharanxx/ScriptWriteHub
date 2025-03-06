@@ -78,3 +78,56 @@ document.addEventListener("DOMContentLoaded", () => {
     fileInput.click();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("Delete functionality will be added in the backend!");
+    });
+  });
+
+  const editButtons = document.querySelectorAll(".edit-btn");
+
+  editButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("Edit functionality will be added in the backend!");
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const editProfileBtn = document.querySelector(".edit-profile-btn");
+
+  if (editProfileBtn) {
+    editProfileBtn.addEventListener("click", () => {
+      alert("Edit Profile functionality will be added in the backend!");
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const storyCards = document.querySelectorAll(".story-card");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const genre = button.getAttribute("data-genre");
+
+      storyCards.forEach((card) => {
+        if (genre === "all" || card.getAttribute("data-genre") === genre) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+
+  const readButtons = document.querySelectorAll(".read-btn");
+  readButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("Read & Comment feature will be added in the backend!");
+    });
+  });
+});
+
+

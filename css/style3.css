@@ -1,0 +1,128 @@
+/* Universal Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #0A0A0A;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #121212;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    color: #1E90FF;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #1E90FF;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1E90FF;
+}
+
+/* Script List */
+.script-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Script Card */
+.script-card {
+    background: #0D0D0D;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #1E90FF;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.script-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.script-card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Script Actions */
+.script-actions {
+    margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.edit-btn {
+    background: #1E90FF;
+    color: white;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.edit-btn:hover {
+    transform: scale(1.05);
+    background: #0A75C2;
+}
+
+.delete-btn:hover {
+    transform: scale(1.05);
+    background: darkred;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

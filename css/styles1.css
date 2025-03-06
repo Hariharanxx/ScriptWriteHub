@@ -25,46 +25,21 @@ header {
     color: #1E90FF;
 }
 
-/* ︙ Menu Button */
-.menu-container {
-    position: relative;
+/* Navigation */
+nav {
+    display: flex;
+    gap: 15px;
 }
 
-.menu-btn {
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.menu-btn:hover {
-    color: #1E90FF;
-}
-
-/* Dropdown Menu */
-.menu-dropdown {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: #1A1A1A;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    width: 140px;
-}
-
-.menu-dropdown a {
-    display: block;
-    padding: 10px;
+nav a {
     color: white;
     text-decoration: none;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
-.menu-dropdown a:hover {
-    background: #1E90FF;
+nav a:hover {
+    color: #1E90FF;
 }
 
 /* Main Section */
@@ -95,6 +70,8 @@ p {
     font-weight: bold;
     font-size: 20px;
     border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
     transition: transform 0.3s, background 0.3s;
 }
 
@@ -140,75 +117,3 @@ blockquote span {
     color: gray;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* ︙ Menu Container */
-.menu-container {
-    position: relative;
-}
-
-/* Menu Button */
-.menu-btn {
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.menu-btn:hover {
-    color: #1E90FF;
-}
-
-/* Dropdown Menu */
-.menu-dropdown {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: #1A1A1A;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    width: 140px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Show menu when active */
-.menu-dropdown.active {
-    display: block;
-}
-
-/* Menu Links */
-.menu-dropdown a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.menu-dropdown a:hover {
-    background: #1E90FF;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
