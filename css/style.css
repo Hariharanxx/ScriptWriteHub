@@ -3,20 +3,23 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center; /* Horizontally centers the form */
+    align-items: center; /* Vertically centers the form */
     background: url('https://source.unsplash.com/1600x900/?theater,movie') no-repeat center center/cover;
     color: white;
 }
 
 /* Form Container */
 .form-container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    width: 400px;
-    margin: 100px auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    width: 400px; /* Balanced width */
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
 }
 
 /* Form Title */
@@ -25,17 +28,17 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: gold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Input Fields */
 input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+    width: 100%; /* Ensures input fields are aligned */
+    padding: 14px;
+    margin: 12px 0;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -50,14 +53,15 @@ input:focus {
 .btn {
     background: gold;
     color: black;
-    padding: 12px;
-    width: 100%;
+    padding: 14px;
+    width: 100%; /* Ensures both buttons are equal in width */
     border: none;
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
+    margin-top: 15px; /* Ensures spacing is even */
 }
 
 .btn:hover {
@@ -67,8 +71,8 @@ input:focus {
 
 /* Form Text */
 .form-text {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 .form-text a {
@@ -92,3 +96,4 @@ input:focus {
         transform: translateY(0);
     }
 }
+
