@@ -4,7 +4,9 @@ include("db.php"); // Ensure DB connection is correct
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = isset($_POST['title']) ? trim($_POST['title']) : '';
+    $short_description= isset($_POST['short_description']) ? trim($_POST['short_description']) : '';
     $content = isset($_POST['content']) ? trim($_POST['content']) : '';
+    $genre = isset($_POST['genre']) ? trim($_POST['genre']) : 'Uncategorized'; // ✅ Get genre from form
 
     if (!isset($_SESSION['user_id'])) {
         die("Error: You must be logged in to submit a story.");
@@ -12,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $user_id = $_SESSION['user_id'];
 
-    // ✅ Verify if user_id exists
+    // ✅ Verify if user_id exists in users table
     $stmt = $conn->prepare("SELECT id FROM users WHERE id = :user_id");
     $stmt->bindParam(':user_id', $user_id);
     $stmt->execute();
@@ -22,12 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-        // ✅ Insert story into database
-        $query = "INSERT INTO stories (title, content, user_id) VALUES (:title, :content, :user_id)";
+        // ✅ Insert story with genre into database
+        $query = "INSERT INTO stories (title, short_description, content, genre, user_id) VALUES (:title, :short_description, :content, :genre, :user_id)";
         $stmt = $conn->prepare($query);
 
         $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':short_description', $short_description);
         $stmt->bindParam(':content', $content);
+        $stmt->bindParam(':genre', $genre); // ✅ Save genre
         $stmt->bindParam(':user_id', $user_id);
 
         if ($stmt->execute()) {
@@ -44,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             icon: 'success',
             confirmButtonText: 'OK'
         }).then(() => {
-            window.location.href = 'homepage.php'; // Redirect to homepage
+            window.location.href = 'genres.php'; // ✅ Redirect to genres page instead of homepage
         });
     </script>
 </body>
