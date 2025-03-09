@@ -36,6 +36,7 @@ if (!isset($_SESSION['user_id'])) {
             <button type="submit" class="btn">Publish Story</button>
         </form>
     </main>
+     <script src="js/scripts.js"></script>
 </body>
 </html>
 
