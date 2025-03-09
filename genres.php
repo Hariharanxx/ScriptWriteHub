@@ -52,7 +52,7 @@ $stories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h3><?= htmlspecialchars($story['title']) ?></h3>
                         <p><strong>Genre:</strong> <?= htmlspecialchars($story['genre']) ?></p>
                         <p><strong>Description:</strong> <?= isset($story['short_description']) ? htmlspecialchars(substr($story['short_description'], 0, 100)) : 'No description avaliable' ?>...</p>
-                        <a href="story.php?id=<?= $story['id'] ?>" class="read-btn">Read & Comment</a>
+                        <a href="story.php?id=<?= $story['id'] ?>" class="read-btn">Read</a>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>

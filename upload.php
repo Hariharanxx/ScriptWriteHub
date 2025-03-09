@@ -14,6 +14,8 @@ if (!isset($_SESSION['user_id'])) {
     <title>Write Your Story - ScriptWriteHub</title>
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- 🔹 Quill.js Styles -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -35,7 +37,8 @@ if (!isset($_SESSION['user_id'])) {
             <textarea id="short-description" name="short_description" placeholder="Write a short summary of your story..." required></textarea>
 
             <label for="story-content">Your Story</label>
-            <textarea id="story-content" name="content" placeholder="Write your story here..." required></textarea>
+            <div id="editor" style="height: 300px;"></div> <!-- 🔹 Quill Editor -->
+            <input type="hidden" name="content" id="story-content"> <!-- Hidden Input -->
 
             <!-- 🔹 Genre Dropdown (No Changes) -->
             <label for="genre">Choose a Genre</label>
@@ -51,6 +54,19 @@ if (!isset($_SESSION['user_id'])) {
         </form>
     </main>
 
-    <script src="js/scripts.js"></script>
+    <!-- 🔹 Quill.js Scripts -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow'  // 'snow' theme gives a clean, modern UI
+        });
+
+        // When the form is submitted, copy Quill content into the hidden input
+        document.querySelector("form").onsubmit = function() {
+            document.querySelector("#story-content").value = quill.root.innerHTML;
+        };
+    </script>
+       <script src="js/scripts.js"></script>
 </body>
 </html>
+

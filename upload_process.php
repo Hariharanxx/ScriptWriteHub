@@ -4,9 +4,9 @@ include("db.php"); // Ensure DB connection is correct
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = isset($_POST['title']) ? trim($_POST['title']) : '';
-    $short_description= isset($_POST['short_description']) ? trim($_POST['short_description']) : '';
-    $content = isset($_POST['content']) ? trim($_POST['content']) : '';
-    $genre = isset($_POST['genre']) ? trim($_POST['genre']) : 'Uncategorized'; // ✅ Get genre from form
+    $short_description = isset($_POST['short_description']) ? trim($_POST['short_description']) : '';
+    $content = isset($_POST['content']) ? $_POST['content'] : ''; // ✅ Remove trim() to preserve HTML formatting
+    $genre = isset($_POST['genre']) ? trim($_POST['genre']) : 'Uncategorized'; 
 
     if (!isset($_SESSION['user_id'])) {
         die("Error: You must be logged in to submit a story.");
@@ -24,14 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-        // ✅ Insert story with genre into database
+        // ✅ Insert story with formatted content into database
         $query = "INSERT INTO stories (title, short_description, content, genre, user_id) VALUES (:title, :short_description, :content, :genre, :user_id)";
         $stmt = $conn->prepare($query);
 
         $stmt->bindParam(':title', $title);
         $stmt->bindParam(':short_description', $short_description);
-        $stmt->bindParam(':content', $content);
-        $stmt->bindParam(':genre', $genre); // ✅ Save genre
+        $stmt->bindParam(':content', $content, PDO::PARAM_STR); // ✅ Save HTML content
+        $stmt->bindParam(':genre', $genre);
         $stmt->bindParam(':user_id', $user_id);
 
         if ($stmt->execute()) {
