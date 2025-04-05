@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write Your Story - ScriptWriteHub</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style2.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- 🔹 Quill.js Styles -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
@@ -21,7 +21,6 @@ if (!isset($_SESSION['user_id'])) {
     <header>
         <h1 class="upload-title">Write & Share Your Story</h1>
         <nav>
-            <a href="dashboard.html">Dashboard</a>
             <a href="homepage.php">Home</a>
             <a href="logout.php">Logout</a>
         </nav>
@@ -37,8 +36,9 @@ if (!isset($_SESSION['user_id'])) {
             <textarea id="short-description" name="short_description" placeholder="Write a short summary of your story..." required></textarea>
 
             <label for="story-content">Your Story</label>
-            <div id="editor" style="height: 300px;"></div> <!-- 🔹 Quill Editor -->
-            <input type="hidden" name="content" id="story-content"> <!-- Hidden Input -->
+            <div id="editor" style="height: 700px;"></div> <!-- 🔹 Increased height from 300px to 700px -->
+            <input type="hidden" name="content" id="story-content">
+
 
             <!-- 🔹 Genre Dropdown (No Changes) -->
             <label for="genre">Choose a Genre</label>

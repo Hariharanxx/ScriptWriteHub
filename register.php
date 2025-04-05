@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if form is submitted
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - ScriptWriteHub</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>

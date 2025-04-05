@@ -121,13 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-  const readButtons = document.querySelectorAll(".read-btn");
-  readButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Read & Comment feature will be added in the backend!");
-    });
-  });
 });
 
 
