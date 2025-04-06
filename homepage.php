@@ -12,7 +12,7 @@
         <h1 class="home-title">Welcome to ScriptWriteHub</h1>
         <nav>
             <a href="http://localhost/ScriptWriteHub/dashboard.php">Dashboard</a>
-            <a href="profile.html">Profile</a>
+            <a href="profile.php">Profile</a>
             <a href="land.html">Logout</a>
         </nav>
     </header>

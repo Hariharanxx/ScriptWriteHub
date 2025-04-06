@@ -49,8 +49,8 @@ $stories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p>Description: <?php echo htmlspecialchars($story['short_description']); ?></p>
                         <p><strong>Genre:</strong> <?php echo htmlspecialchars($story['genre']); ?></p>
                         <div class="script-actions">
-                            <a href="edit_story.php?id=<?php echo $story['id']; ?>" class="edit-btn">Edit</a>
-                            <a href="delete_story.php?id=<?php echo $story['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this story?');">Delete</a>
+                            <a href="edit_script.php?id=<?php echo $story['id']; ?>" class="edit-btn">Edit</a>
+                            <a href="delete_script.php?id=<?php echo $story['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this story?');">Delete</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -60,6 +60,6 @@ $stories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </main>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

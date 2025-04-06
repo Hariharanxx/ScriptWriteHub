@@ -79,32 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const deleteButtons = document.querySelectorAll(".delete-btn");
-
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Delete functionality will be added in the backend!");
-    });
-  });
-
-  const editButtons = document.querySelectorAll(".edit-btn");
-
-  editButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Edit functionality will be added in the backend!");
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const editProfileBtn = document.querySelector(".edit-profile-btn");
-
-  if (editProfileBtn) {
-    editProfileBtn.addEventListener("click", () => {
-      alert("Edit Profile functionality will be added in the backend!");
-    });
-  }
-});
-document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const storyCards = document.querySelectorAll(".story-card");
 
