@@ -25,7 +25,7 @@
     <section class="genres-section">
         <h2 class="genres-title">🎬 Discover & Connect with Amazing Stories!</h2>
         <p>Browse scripts across different genres and engage with talented filmmakers.</p>
-        <a href="http://localhost/ScriptWriteHub/genres.php" class="btn genres-btn">Explore All Genres</a>
+        <a href="genres.php" class="btn genres-btn">Explore All Genres</a>
     </section>
 
     <section class="quotes-section">
