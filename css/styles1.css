@@ -28,6 +28,10 @@ header {
 
 /* Navigation */
 nav {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E90FF;
     display: flex;
     gap: 15px;
 }
@@ -181,38 +185,87 @@ blockquote span {
     background: #0A0A0A;
 }
 
-/* Footer (Small & Professional) */
+/* Footer (Centered & Professional) */
 footer {
     background: #121212;
-    padding: 20px;
+    padding: 20px 0; /* Adjusted padding for better spacing */
     margin-top: 50px;
+    text-align: center; /* Center-align all footer content */
+    color: white; /* Ensure text is visible on dark background */
 }
 
 .footer-content {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto; /* Center the content horizontally */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    opacity: 0.8; /* Slight transparency for a modern look */
+    line-height: 1.6; /* Improve readability */
 }
 
 .footer-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    opacity: 0.7;
+    margin: 10px 0; /* Add spacing between paragraphs */
 }
 
 .footer-nav {
-    margin-top: 10px;
+    margin-top: 15px; /* Add spacing above the navigation links */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 15px; /* Add spacing between links */
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
 }
 
 .footer-nav a {
     font-family: 'Poppins', sans-serif;
     color: #1E90FF;
     text-decoration: none;
-    margin: 0 10px;
     font-size: 14px;
-    transition: color 0.3s ease-in-out;
+    font-weight: bold; /* Make links stand out */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .footer-nav a:hover {
-    color: white;
+    color: white; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
 }
 
+/* Grandiose Button Styling */
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #fbff00dc, #b3ff00);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #73ff00, #00ff37); /* Change gradient on hover */
+}
+
+/* Add a subtle animation effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.btn {
+    animation: pulse 2s infinite; /* Add a pulsing animation */
+}

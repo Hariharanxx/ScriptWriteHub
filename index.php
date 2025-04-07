@@ -1,3 +1,7 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,8 +20,8 @@
       <div class="overlay"></div>
       <header>
         <nav>
-          <a href="http://localhost/ScriptWriteHub/register.php">Register</a>
-          <a href="http://localhost/ScriptWriteHub/login.php">Login</a>
+          <a href="register.php">Register</a>
+          <a href="login.php">Login</a>
         </nav>
       </header>
 
@@ -25,7 +29,7 @@
         <h1 class="main-title">ScriptWriteHub</h1>
         <h2 class="fade-in">"Where Stories Come to Life"</h2>
         <a
-          href="http://localhost/ScriptWriteHub/register.php"
+          href="register.php"
           class="btn hover-effect"
           >Join Now</a
         >

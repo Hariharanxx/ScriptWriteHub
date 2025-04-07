@@ -11,15 +11,15 @@
     <header>
         <h1 class="home-title">Welcome to ScriptWriteHub</h1>
         <nav>
-            <a href="http://localhost/ScriptWriteHub/dashboard.php">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
             <a href="profile.php">Profile</a>
-            <a href="land.html">Logout</a>
+            <a href="logout.php">Logout</a>
         </nav>
     </header>
     <main class="home-main">
         <h2 class="tagline">"Upload Your Script to Give Life"</h2>
         <p>Your creativity deserves the spotlight. Share your story with the world.</p>
-        <a href="http://localhost/ScriptWriteHub/upload.php" class="btn">Upload Script</a>
+        <a href="upload.php" class="btn">Upload your story</a>
     </main>
 
     <section class="genres-section">
@@ -49,7 +49,7 @@
     <section class="cta-section">
         <h2>🎥 Ready to Share Your Story?</h2>
         <p>Join the community of filmmakers and bring your script to life.</p>
-        <a href="http://localhost/ScriptWriteHub/upload.php" class="btn">Start Uploading</a>
+        <a href="upload.php" class="btn">Start Uploading</a>
     </section>
 
     
@@ -57,10 +57,10 @@
         <div class="footer-content">
             <p>© 2025 ScriptWriteHub. All Rights Reserved.</p>
             <nav class="footer-nav">
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+                <a href="includes/about.html">About</a>
+                <a href="includes/contact.html">Contact</a>
+                <a href="includes/privacy.html">Privacy Policy</a>
+                <a href="includes/terms.html">Terms of Service</a>
             </nav>
         </div>
     </footer>

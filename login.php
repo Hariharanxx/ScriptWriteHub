@@ -2,6 +2,8 @@
 require 'db.php'; // Connect to database
 session_start();
 
+$error = ""; // Initialize an error message variable
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -18,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: homepage.php"); // Redirect to home page after login
         exit();
     } else {
-        echo "<p style='color: red;'>Invalid email or password.</p>";
+        $error = "Invalid email or password."; // Set error message
     }
 }
 ?>
@@ -35,6 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="form-container">
         <h1 class="form-title">Welcome Back!</h1>
+        <!-- Display error message if it exists -->
+        <?php if (!empty($error)): ?>
+            <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
         <form id="login-form" action="login.php" method="POST">
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>

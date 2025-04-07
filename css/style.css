@@ -3,23 +3,26 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full screen height */
+    min-height: 100vh; /* Ensures full screen height */
     display: flex;
     justify-content: center; /* Horizontally centers the form */
     align-items: center; /* Vertically centers the form */
     background: url('https://source.unsplash.com/1600x900/?theater,movie') no-repeat center center/cover;
     color: white;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
 }
 
 /* Form Container */
 .form-container {
     background: rgba(0, 0, 0, 0.85);
-    padding: 40px;
-    width: 400px; /* Balanced width */
+    padding: 40px 30px; /* Adjusted padding for better spacing */
+    width: 100%;
+    max-width: 400px; /* Ensures the form doesn't stretch too wide */
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Form Title */
@@ -41,6 +44,7 @@ input {
     font-size: 18px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Prevents overflow due to padding */
 }
 
 input:focus {
@@ -62,6 +66,7 @@ input:focus {
     border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
     margin-top: 15px; /* Ensures spacing is even */
+    box-sizing: border-box;
 }
 
 .btn:hover {
@@ -84,6 +89,17 @@ input:focus {
 .form-text a:hover {
     color: white;
 }
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.1); /* Light red background for better visibility */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
 
 /* Fade-in Animation */
 @keyframes fadeIn {
@@ -96,4 +112,3 @@ input:focus {
         transform: translateY(0);
     }
 }
-
