@@ -163,7 +163,13 @@ $comments = $comments_query->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="container">
     <div class="story-title"><?php echo htmlspecialchars($story['title']); ?></div>
-    <div class="story-meta">By <?php echo htmlspecialchars($story['username']); ?> | Genre: <?php echo htmlspecialchars($story['genre']); ?></div>
+<div class="story-meta">
+    By <a href="view_profile.php?id=<?php echo $story['user_id']; ?>" style="color: #1877f2; text-decoration: none;">
+        <?php echo htmlspecialchars($story['username']); ?>
+    </a> 
+    | Genre: <?php echo htmlspecialchars($story['genre']); ?>
+</div>
+
     <div class="story-content"><?php echo nl2br(htmlspecialchars_decode($story['content'])); ?></div>
 
     <hr>

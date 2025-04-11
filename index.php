@@ -8,7 +8,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ScriptWriteHub</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@500&display=swap"
@@ -35,6 +35,6 @@ $isLoggedIn = isset($_SESSION['user_id']);
         >
       </div>
     </div>
-     <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
   </body>
 </html>

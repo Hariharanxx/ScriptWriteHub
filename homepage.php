@@ -13,6 +13,7 @@
         <nav>
             <a href="dashboard.php">Dashboard</a>
             <a href="profile.php">Profile</a>
+            <a href="inbox.php">Inbox</a>
             <a href="logout.php">Logout</a>
         </nav>
     </header>
@@ -65,6 +66,6 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+     <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

@@ -66,7 +66,7 @@ if (!isset($_SESSION['user_id'])) {
             document.querySelector("#story-content").value = quill.root.innerHTML;
         };
     </script>
-       <script src="js/scripts.js"></script>
+  <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
 

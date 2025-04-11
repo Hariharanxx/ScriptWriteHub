@@ -48,6 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="form-text">Don't have an account? <a href="register.php">Sign Up</a></p>
         </form>
     </div>
-    <script src="js/scripts.js"></script>
+  <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

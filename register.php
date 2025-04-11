@@ -34,6 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if form is submitted
             <p class="form-text">Already have an account? <a href="login.php">Login</a></p>
         </form>
     </div>
-    <script src="js/scripts.js"></script>
+     <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
