@@ -96,3 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    overlay.classList.toggle("show");
+});
+
+// Hide menu if clicking outside
+overlay.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    overlay.classList.remove("show");
+});
+

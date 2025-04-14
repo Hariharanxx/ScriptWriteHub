@@ -9,14 +9,21 @@
 </head>
 <body>
     <header>
-        <h1 class="home-title">Welcome to ScriptWriteHub</h1>
-        <nav>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="profile.php">Profile</a>
-            <a href="inbox.php">Inbox</a>
-            <a href="logout.php">Logout</a>
-        </nav>
-    </header>
+    <h1 class="home-title">Welcome to ScriptWriteHub</h1>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+        <a href="dashboard.php">Dashboard</a>
+        <a href="profile.php">Profile</a>
+        <a href="inbox.php">Inbox</a>
+        <a href="logout.php">Logout</a>
+    </nav>
+     <div class="overlay" id="overlay"></div>
+</header>
+
     <main class="home-main">
         <h2 class="tagline">"Upload Your Script to Give Life"</h2>
         <p>Your creativity deserves the spotlight. Share your story with the world.</p>
@@ -65,7 +72,6 @@
             </nav>
         </div>
     </footer>
-
      <script src="js/scripts.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

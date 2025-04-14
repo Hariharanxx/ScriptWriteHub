@@ -232,8 +232,8 @@ footer {
 /* Grandiose Button Styling */
 .btn {
     display: inline-block;
-    background: linear-gradient(90deg, #fbff00dc, #b3ff00);
-    color: white;
+    background: linear-gradient(90deg, #ff00aae0, #b3ff0046);
+    color: rgb(19, 3, 3);
     font-size: 20px;
     font-weight: bold;
     padding: 15px 30px;
@@ -247,7 +247,7 @@ footer {
 .btn:hover {
     transform: scale(1.1); /* Slightly enlarge the button */
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(90deg, #73ff00, #00ff37); /* Change gradient on hover */
+    background: linear-gradient(90deg, #00ffddd2, #00ff37); /* Change gradient on hover */
 }
 
 /* Add a subtle animation effect */
@@ -269,3 +269,67 @@ footer {
 .btn {
     animation: pulse 2s infinite; /* Add a pulsing animation */
 }
+/* Hamburger Style - Always visible on desktop */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 20px;
+    z-index: 1000;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Show overlay */
+.overlay.show {
+    display: block;
+}
+
+/* Sliding Menu */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #1A1A1A;
+    padding: 40px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.nav-links.show {
+    right: 0;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
