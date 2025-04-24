@@ -1,9 +1,5 @@
 <?php
 session_start();
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-
 include("db.php");
 
 if (!isset($_SESSION['user_id'])) {
@@ -42,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['message'], $_POST['to
         ]);
     }
 
-    echo "<script>location.replace('inbox.php?to_user_id=$to_user_id');</script>";
+    header("Location: inbox.php?to_user_id=$to_user_id");
     exit();
 }
 
@@ -252,10 +248,10 @@ if (isset($_GET['to_user_id'])) {
                 <?php endforeach; ?>
             </div>
 
-            <form class="message-form" method="POST" onsubmit="scrollToBottom()">
+            <form class="message-form" method="POST" action="inbox.php" onsubmit="scrollToBottom()">
                 <input type="hidden" name="to_user_id" value="<?= $to_user_id; ?>">
                 <input type="text" name="message" placeholder="Type a message..." required>
-                <button type="submit">Send</button>
+                <button type="submit" name="send">Send</button>
             </form>
         <?php else: ?>
             <div class="chat-title">Select a conversation</div>
@@ -267,9 +263,12 @@ if (isset($_GET['to_user_id'])) {
     function scrollToBottom() {
         setTimeout(() => {
             const container = document.getElementById("message-container");
-            if (container) container.scrollTop = container.scrollHeight;
+            if (container) {
+                container.scrollTop = container.scrollHeight;
+            }
         }, 100);
     }
+
     window.onload = scrollToBottom;
 </script>
 
