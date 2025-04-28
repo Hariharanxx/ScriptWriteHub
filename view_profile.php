@@ -42,7 +42,7 @@ $stories = $scripts->fetchAll(PDO::FETCH_ASSOC);
 
     <main class="profile-container">
         <div class="profile-info">
-            <img src="<?php echo !empty($user['profile_picture']) ? 'uploads/' . htmlspecialchars($user['profile_picture']) : 'images/default-profile.png'; ?>" alt="Profile Picture" class="profile-pic">
+            <img src="<?php echo !empty($user['profile_picture']) ? 'uploads/' . htmlspecialchars($user['profile_picture']) : 'images/default-profile.png'; ?>"  class="profile-pic">
             <h2 class="username"><?php echo htmlspecialchars($user['username']); ?></h2>
             <p class="bio"><?php echo htmlspecialchars($user['bio']); ?></p>
         </div>
@@ -63,7 +63,7 @@ $stories = $scripts->fetchAll(PDO::FETCH_ASSOC);
 </body>
 </html>
 <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != $profile_id): ?>
-    <form action="message.php" method="GET">
+    <form action="inbox.php" method="GET">
         <input type="hidden" name="to_user_id" value="<?php echo $profile_id; ?>">
         <button class="edit-profile-btn" type="submit">Send Message</button>
     </form>

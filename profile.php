@@ -42,14 +42,14 @@ if (!$user) {
 
 <main class="profile-container">
     <div class="profile-info">
-        <img src="<?php echo !empty($user['profile_picture']) ? 'uploads/' . htmlspecialchars($user['profile_picture']) : 'images/default-profile.png'; ?>" alt="Profile Picture" class="profile-pic">
+        <img src="<?php echo !empty($user['profile_picture']) ? 'uploads/' . htmlspecialchars($user['profile_picture']) : 'images/default-profile.png'; ?>"  class="profile-pic">
         <h2 class="username"><?php echo htmlspecialchars($user['username']); ?></h2>
         <p class="bio"><?php echo htmlspecialchars($user['bio']); ?></p>
 
         <?php if ($current_user_id == $view_user_id): ?>
             <a href="edit_profile.php"><button class="edit-profile-btn">Edit Profile</button></a>
         <?php else: ?>
-            <a href="message.php?to=<?php echo $user['id']; ?>"><button class="edit-profile-btn">Message</button></a>
+            <a href="inbox.php?to=<?php echo $user['id']; ?>"><button class="edit-profile-btn">Message</button></a>
         <?php endif; ?>
     </div>
 

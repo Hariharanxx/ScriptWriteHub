@@ -227,7 +227,7 @@ if (isset($_GET['to_user_id'])) {
                         <img src="uploads/<?= htmlspecialchars($user['profile_picture']); ?>" alt="Profile">
                     </a>
                 <?php else: ?>
-                    <a href="public_profile.php?id=<?= $user['id']; ?>" onclick="event.stopPropagation();" class="no-style">
+                    <a href="view_profile.php?id=<?= $user['id']; ?>" onclick="event.stopPropagation();" class="no-style">
                         <div class="profile-icon"><?= strtoupper(substr($user['username'], 0, 1)); ?></div>
                     </a>
                 <?php endif; ?>
