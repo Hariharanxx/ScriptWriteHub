@@ -33,7 +33,7 @@ $stories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h1 class="genres-title">Explore Stories by Genre</h1>
         <nav>
             <a href="homepage.php">Home</a>
-            <a href="land.html">Logout</a>
+            <a href="index.php">Logout</a>
         </nav>
     </header>
 
