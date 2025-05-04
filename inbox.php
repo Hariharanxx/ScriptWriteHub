@@ -223,8 +223,8 @@ if (isset($_GET['to_user_id'])) {
         <?php foreach ($contacts as $user): ?>
             <div class="contact" onclick="window.location='inbox.php?to_user_id=<?= $user['id']; ?>'">
                 <?php if (!empty($user['profile_picture'])): ?>
-                    <a href="public_profile.php?id=<?= $user['id']; ?>" onclick="event.stopPropagation();" class="no-style">
-                        <img src="uploads/<?= htmlspecialchars($user['profile_picture']); ?>" alt="Profile">
+                    <a href="view_profile.php?id=<?= $user['id']; ?>" onclick="event.stopPropagation();" class="no-style">
+                        <img src="uploads/<?= htmlspecialchars($user['profile_picture']); ?>"  />
                     </a>
                 <?php else: ?>
                     <a href="view_profile.php?id=<?= $user['id']; ?>" onclick="event.stopPropagation();" class="no-style">
